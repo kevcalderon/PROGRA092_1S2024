@@ -1,0 +1,17 @@
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\obj\Debug\net6.0-windows\clase7.vbproj.AssemblyReference.cache
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\obj\Debug\net6.0-windows\clase7.Form1.resources
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\obj\Debug\net6.0-windows\clase7.vbproj.GenerateResource.cache
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\obj\Debug\net6.0-windows\clase7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\obj\Debug\net6.0-windows\clase7.AssemblyInfoInputs.cache
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\obj\Debug\net6.0-windows\clase7.AssemblyInfo.vb
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\obj\Debug\net6.0-windows\clase7.vbproj.CoreCompileInputs.cache
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\bin\Debug\net6.0-windows\clase7.exe
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\bin\Debug\net6.0-windows\clase7.deps.json
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\bin\Debug\net6.0-windows\clase7.runtimeconfig.json
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\bin\Debug\net6.0-windows\clase7.dll
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\bin\Debug\net6.0-windows\clase7.pdb
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\obj\Debug\net6.0-windows\clase7.dll
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\obj\Debug\net6.0-windows\refint\clase7.dll
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\obj\Debug\net6.0-windows\clase7.pdb
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\obj\Debug\net6.0-windows\clase7.genruntimeconfig.cache
+C:\Users\josue\Desktop\PROGRA092 - 2024\PROGRA092_1S2024\clase7\obj\Debug\net6.0-windows\ref\clase7.dll

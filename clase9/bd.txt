@@ -1,0 +1,41 @@
+CREATE DATABASE clase9;
+use clase9;
+
+create table producto (
+    codigo int primary key auto_increment,
+    nombre varchar(50),
+    marca varchar(50),
+    precio double
+);
+
+-- DROP
+drop table producto;
+
+
+-- INSERT
+insert into producto (nombre, marca, precio) values ('galletas oreo', 'marca1', 20.50);
+insert into producto (nombre, marca, precio) values ('galletas emperador', 'marca3', 10.00);
+insert into producto (nombre, marca, precio) values ('cereal famoso', 'marca personal', 40.25);
+
+-- select
+select * from producto;
+
+-- update
+update producto set nombre = 'galleta arcoiris' where codigo = 1;
+update producto set marca = 'gamesa';
+
+-- delete
+delete from producto where codigo = 1;
+delete from producto;
+
+-- busquedas
+/*
+    mostrar información en el combo box select
+    guardar el codigo del producto
+    modificar o eliminar el producto especificamente
+*/
+select * from producto where codigo = 4;
+select * from producto where nombre like '%galletas%';
+select * from producto where precio >= 20;
+
+
