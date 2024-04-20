@@ -1,0 +1,169 @@
+CREATE DATABASE clase9;
+use clase9;
+
+create table producto (
+    codigo int primary key auto_increment,
+    nombre varchar(50),
+    marca varchar(50),
+    precio double
+);
+
+create table Usuario(
+    id int primary key auto_increment,
+    nombre varchar(50),
+    apellido varchar(50)
+);
+
+drop table Usuario;
+
+
+insert into Usuario(nombre, apellido) values('dany','aguilar');
+insert into Usuario(nombre, apellido) values('ana','melendez');
+insert into Usuario(nombre, apellido) values('paula','maria');
+insert into Usuario(nombre, apellido) values('maria','garrido');
+select * from Usuario;
+
+
+-- DROP
+drop table producto;
+
+
+-- INSERT
+insert into producto (nombre, marca, precio) values ('galletas oreo', 'marca1', 20.50);
+insert into producto (nombre, marca, precio) values ('galletas emperador', 'marca3', 10.00);
+insert into producto (nombre, marca, precio) values ('cereal famoso', 'marca personal', 40.25);
+
+-- select
+select * from producto;
+
+-- update
+update producto set nombre = 'galleta arcoiris' where codigo = 1;
+update producto set marca = 'gamesa';
+
+-- delete
+delete from producto where codigo = 1;
+drop table producto;
+delete from producto;
+
+-- busquedas
+/*
+    mostrar información en el combo box select
+    guardar el codigo del producto
+    modificar o eliminar el producto especificamente
+*/
+select * from producto where codigo = 4;
+select * from producto where nombre like '%galletas%';
+select * from producto where precio >= 20;
+
+
+create table Cliente(
+    nit int primary key,
+    nombre varchar(50),
+    direccion varchar(50),
+    telefono int
+);
+
+create table Factura(
+    codigo int primary key auto_increment,
+    fecha Date,
+    total double,
+    idCliente int,
+    foreign key (idCliente) references Cliente(nit)
+);
+
+-- Inserts para Cliente
+INSERT INTO Cliente (Nit, nombre, direccion, telefono)
+VALUES
+(1, 'Juan Pérez', 'Calle 123, Ciudad A', 5551234),
+(2, 'María López', 'Avenida 456, Ciudad B', 5555678),
+(3, 'Carlos Sánchez', 'Calle 789, Ciudad C', 5559101),
+(4, 'Ana Ramírez', 'Avenida 012, Ciudad D', 5551122),
+(5, 'Pedro González', 'Calle 345, Ciudad E', 5553344);
+
+select * from Cliente;
+
+
+-- Inserts para Factura
+INSERT INTO Factura (fecha, total, idCliente)
+VALUES
+('2024-04-10', 100.50, 1),
+('2024-04-11', 200.75, 2),
+('2024-04-12', 150.30, 3),
+('2024-04-13', 75.20, 4),
+('2024-04-14', 300.90, 5);
+
+
+select * from Factura;
+
+-- IZQ FACTURA DERC CLIENT
+
+-- INNER JOIN
+select Factura.Codigo, Cliente.nombre, Factura.total
+from Factura
+inner join cliente on Factura.idCliente = Cliente.nit;
+
+-- LEFT JOIN
+select Factura.Codigo, Cliente.nombre, Cliente.direccion, Factura.Total
+from Factura
+left join Cliente Cliente on Cliente.nit = Factura.idCliente;
+
+-- RIGHT JOIN
+select Factura.Codigo, C.nombre, Factura.Total
+From Factura
+RIGHT JOIN Cliente C on C.nit = Factura.idCliente;
+
+-- FULL JOIN
+select * from Factura
+inner join Cliente C on Factura.idCliente = C.nit
+
+
+
+-- REPORTES 1
+CREATE TABLE Categoria (
+    codigo INT PRIMARY KEY,
+    categoria VARCHAR(50)
+);
+
+-- Creación de la tabla Producto
+CREATE TABLE Producto (
+    codigo INT PRIMARY KEY,
+    nombre VARCHAR(50),
+    marca VARCHAR(50),
+    precio DOUBLE,
+    codigo_categoria INT,
+    FOREIGN KEY (codigo_categoria) REFERENCES Categoria(codigo)
+);
+
+INSERT INTO Categoria (codigo, categoria)
+VALUES
+(1, 'Electrónica'),
+(2, 'Ropa'),
+(3, 'Hogar'),
+(4, 'Alimentos'),
+(5, 'Juguetes');
+
+
+INSERT INTO Producto (codigo, nombre, marca, precio, codigo_categoria)
+VALUES
+(101, 'Smartphone', 'Samsung', 800.50, 1),
+(102, 'Camiseta', 'Nike', 25.99, 2),
+(103, 'Mesa', 'IKEA', 150.75, 3),
+(104, 'Leche', 'Alpura', 2.50, 4),
+(105, 'Pelota', 'Adidas', 10.00, 5),
+(106, 'Laptop', 'Dell', 1200.00, 1),
+(107, 'Pantalón', 'Levis', 50.50, 2),
+(108, 'Sofá', 'La-Z-Boy', 500.00, 3),
+(109, 'Pan', 'Bimbo', 1.50, 4),
+(110, 'Rompecabezas', 'Hasbro', 15.99, 5);
+
+
+select * from Producto;
+select * from Categoria;
+
+select categoria.categoria, count(P.codigo) as Cantidad_productos from Categoria
+left join Producto P on Categoria.codigo = P.codigo_categoria
+group by categoria.categoria
+
+-- Producto
+-- count
+-- agrupacion
